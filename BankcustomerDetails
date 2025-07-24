@@ -1,0 +1,34 @@
+// bank app
+package com.bank;
+
+public class Customer {
+    // fields
+    int cid;
+    String cname;
+    String address;
+    long mobilenumber;
+
+    // method to set customer details
+    void setCustomerDetails(int a, String b, String c, long d) {
+        cid = a;
+        cname = b;
+        address = c;
+        mobilenumber = d;
+    }
+
+    // method to get customer details
+    void getCustomerDetails() {
+        System.out.println("cid is: " + cid);
+        System.out.println("cname is: " + cname);
+        System.out.println("address is: " + address);
+        System.out.println("mobilenumber is: " + mobilenumber);
+    }
+
+    // main method
+    public static void main(String[] args) {
+        // create a customer object
+        Customer c = new Customer();
+        c.setCustomerDetails(1001, "Nandu", "Kanigiri", 9876543210L); // 10-digit mobile number
+        c.getCustomerDetails();
+    }
+}
