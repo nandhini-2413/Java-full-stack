@@ -1,0 +1,60 @@
+package com.Rise;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class RiseStudent {
+
+    // Constructor
+    public RiseStudent() {
+        System.out.println("Welcome to Rise portal");
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        new RiseStudent();
+
+        System.out.println("\nPlease register with your details:");
+
+        System.out.print("Enter your roll number: ");
+        String rollno = sc.nextLine();
+
+        System.out.print("Enter your name: ");
+        String name = sc.nextLine();
+
+        System.out.print("Enter your branch: ");
+        String branch = sc.nextLine();
+
+        System.out.print("Enter Subject 1 marks (out of 100): ");
+        int sub1 = sc.nextInt();
+
+        System.out.print("Enter Subject 2 marks (out of 100): ");
+        int sub2 = sc.nextInt();
+
+        int total = sub1 + sub2;
+        double average = total / 2.0;
+        double percentage = total / 200.0 * 100;
+
+        System.out.println("\nYour details with us:");
+        System.out.printf(Locale.ENGLISH,
+            "Roll No     : %s%n" +
+            "Name        : %s%n" +
+            "Branch      : %s%n" +
+            "Total Marks : %d%n" +
+            "Average     : %.2f%n" +
+            "Percentage  : %.2f%%%n",
+            rollno, name, branch, total, average, percentage);
+
+        String grade;
+        if (average >= 70 && average <= 80) {
+            grade = "B";
+        } else if (average >= 60 && average < 70) {
+            grade = "C";
+        } else {
+            grade = "Unfit";
+        }
+
+        System.out.println("Your grade is: " + grade);
+        sc.close();
+    }
+}
