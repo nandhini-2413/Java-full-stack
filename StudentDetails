@@ -1,0 +1,30 @@
+package Student.com;
+
+public class Student {
+
+    int sid;
+    String name;
+    String branch;
+
+    // Set student details
+    void setStudentDetails(int a, String b, String c) {
+        sid = a;
+        name = b;
+        branch = c;
+    }
+
+    // Get student details
+    void getStudentDetails() {
+        System.out.println("sid is: " + sid);
+        System.out.println("name is: " + name);
+        System.out.println("branch is: " + branch);
+    }
+
+    // Main method
+    public static void main(String args[]) {
+        Student s = new Student(); // FIX: Added semicolon and constructor call
+        s.setStudentDetails(4214, "Nandu", "cse-aiml"); // FIX: Method call uses .
+        s.getStudentDetails(); // FIX: Method call uses .
+    }
+}
+
